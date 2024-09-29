@@ -61,3 +61,37 @@ button {
 .backdrop.show {
   opacity: 30%;
 }
+
+.popup-modal {
+  transition: opacity 0.4s;
+  animation: 0.3s up 1 alternate;
+}
+
+.popup-modal.show {
+  animation: 0.3s drop 1 alternate;
+  animation-timing-function: ease-out;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(-50%, -250%);
+  }
+  50% {
+    transform: translate(-50%, -150%);
+  }
+  75% {
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
